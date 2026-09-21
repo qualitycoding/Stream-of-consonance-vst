@@ -1,0 +1,12 @@
+[project]
+name = "consonance"
+version = "0.1.0"
+description = "Reversible consonance model and consonance-targeted tone-stream generator"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+dev = ["pytest", "rdata"]
+
+[tool.setuptools.package-data]
+consonance = ["data/*.json"]

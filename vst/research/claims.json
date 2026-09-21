@@ -1,0 +1,87 @@
+{
+ "claims": [
+  {"id": "C-001", "claim": "The composite model's timbre is 11 harmonics with amplitude 1/h (incon default), and the scoring timbre must equal the synthesis timbre.",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:consonance/timbre.py, consonance/composite.py, consonance/render.py", "title": "Stream-of-consonance source", "version": "9c8e5e1", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["D-003", "T-001"], "verified_by": "tests/fixtures/timbre.json"},
+
+  {"id": "C-002", "claim": "Roughness is Hutchinson & Knopoff with the Mashinter 2006 parametrisation, cut off at y > 1.2 critical bandwidths and normalised by sum(A^2).",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:consonance/interference.py", "title": "incon R/model-dycon.R port", "version": "9c8e5e1", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["S-004", "T-002"], "verified_by": "tests/fixtures/interference.json (13 chords, exact)"},
+
+  {"id": "C-003", "claim": "Harmonicity is Milne (2013) / Harrison & Pearce (2018) pitch-class harmonicity: Gaussian-smoothed circular spectrum (sigma 6.83 cents, rho 0.75) on a 1200-bin grid, cosine-similarity template sweep, KL from uniform in bits.",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:consonance/harmonicity.py", "title": "incon R/model-har18.R and hrep R/milne-pc-spectrum.R port", "version": "9c8e5e1", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["S-005", "T-003"], "verified_by": "tests/fixtures/harmonicity.json"},
+
+  {"id": "C-004", "claim": "Familiarity is defined only for chords whose intervals are within 20.0 cents of 12-TET; the test is strictly greater-than, so exactly 20.0 cents is inside. Otherwise the model drops to the count-weighted neutral log-probability -2.34127473752867.",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:consonance/familiarity.py", "title": "Billboard corpus familiarity", "version": "9c8e5e1", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["S-004", "T-004", "T-005"], "verified_by": "tests/fixtures/familiarity.json; boundary probed at 19 and 21 cents"},
+
+  {"id": "C-005", "claim": "Composite score = 0.628434666589357 - 1.62001025973261*roughness + 1.77992362857478*harmonicity + 0.0892234643584134*logP, with the chord-size term disabled (weight 0).",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:consonance/composite.py", "title": "incon har_19_composite_coef", "version": "9c8e5e1", "accessed": "2026-09-20", "tier": 1},
+               {"url": "Harrison & Pearce (2020), Psychological Review 127(2), 216-244", "title": "Simultaneous consonance in music perception and composition", "version": "2020", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["S-006", "T-006"], "verified_by": "tests/fixtures/composite.json (13 chords, error 0.0)"},
+
+  {"id": "C-006", "claim": "On a 1-cent grid with 1200 bins, every candidate's pitch-class spectrum is an exact circular rotation of one precomputed single-note spectrum, so harmonicity over a candidate set can be computed by index shift rather than by rebuilding each spectrum.",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:vst/research/spikes/spike_02_rotation.py", "title": "SPIKE-02", "version": "2026-09-20", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["D-004", "S-005"], "verified_by": "max abs diff 1.665e-15 over 2401 candidates; 6.8x speedup in numpy alone"},
+
+  {"id": "C-007", "claim": "Candidate sets are built as: standard, step 1200/edo; free, uniform step resolution_cents; or free with snap_to, the given intervals repeated every octave and clipped to range. Endpoints use ceil((low-offset)/step) and floor((high-offset)/step), inclusive.",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:consonance/pitchset.py", "title": "Pitch-mode switch", "version": "9c8e5e1", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["S-007", "T-008"], "verified_by": "tests/fixtures/candidates.json (6 sets incl. 31-EDO, 19-EDO, JI lattice)"},
+
+  {"id": "C-008", "claim": "numpy's default_rng is PCG64 (XSL-RR 128/64); Generator.random() converts a raw uint64 to a double as (raw >> 11) * 2**-53.",
+   "load_bearing": true, "confidence": "corroborated",
+   "sources": [{"url": "numpy.random.PCG64 documentation", "title": "numpy random bit generators", "version": "2.4.4", "accessed": "2026-09-20", "tier": 1},
+               {"url": "repo:vst/tests/fixtures/rng.json", "title": "recorded raw uint64 and doubles for 7 seeds", "version": "2026-09-20", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["D-005", "S-003", "T-010"],
+   "note": "Corroborated rather than verified: the C++ implementation does not yet exist, so the conversion rule is asserted against recorded outputs but not yet reproduced. T-010 promotes it to verified."},
+
+  {"id": "C-009", "claim": "generate_stream is deterministic given seed, configuration and candidate set: one RNG draw per note, drawn after the weight vector is built; any additional draw desynchronises every subsequent note.",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:consonance/sampler.py", "title": "Conditional sampler", "version": "9c8e5e1", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["S-008", "T-011"], "verified_by": "streams regenerated and reproduced exactly; tests/fixtures/streams.json"},
+
+  {"id": "C-010", "claim": "Ableton Live supports MPE from version 11 onward; as of Live 12 all bundled Live instruments are MPE-capable, and MPE data can be drawn without an MPE controller.",
+   "load_bearing": true, "confidence": "corroborated",
+   "sources": [{"url": "https://help.ableton.com/hc/en-us/articles/360019144999", "title": "MPE in Live 11 and later FAQ", "version": "current", "accessed": "2026-09-20", "tier": 1},
+               {"url": "https://cdm.link/ableton-live-11-3-in-beta/", "title": "Live 11.3 MPE expansion", "version": "11.3", "accessed": "2026-09-20", "tier": 3}],
+   "contradicted_by": [], "informs": ["A-001", "S-012"]},
+
+  {"id": "C-011", "claim": "A 14-bit pitch bend over a +/-2 semitone range resolves 4 semitones / 16384 steps = 0.0244 cents per step; over +/-48 semitones it resolves 0.586 cents. Only the former meets the 0.05-cent budget in T-012.",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:vst/tests/fixtures/mpe.json", "title": "MPE encoding fixture", "version": "2026-09-20", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["D-006", "S-012", "T-012"], "verified_by": "arithmetic, and max_error_cents 0.05 recorded across 10 fixture pitches"},
+
+  {"id": "C-012", "claim": "Per-note generation in the Python reference costs about 12 ms in standard mode (25 candidates), 133 ms in free 5-cent mode (481 candidates) and 612 ms in free 1-cent mode (2401 candidates); harmonicity is roughly 91% of that cost.",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "repo:vst/research/spikes/spike_01_timing.py", "title": "SPIKE-01", "version": "2026-09-20", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["D-002", "S-010", "T-013"],
+   "note": "Measured on the planning sandbox, not on the target machine. The absolute numbers will differ; the ordering and the conclusion that generation cannot run on the audio thread will not. See R-002."},
+
+  {"id": "C-013", "claim": "JUCE 8.0.15 is the highest tag on the 8.x line; the 9.x line has reached 9.0.2 (2026-09-07).",
+   "load_bearing": true, "confidence": "verified",
+   "sources": [{"url": "https://github.com/juce-framework/JUCE", "title": "git ls-remote --tags", "version": "2026-09-20", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [], "informs": ["D-001", "S-002"], "verified_by": "direct query of the official repository's tag list"},
+
+  {"id": "C-014", "claim": "JUCE 9.0.0 introduces 35+ breaking changes, including moving functions and types out of VST3ClientExtensions into a new VST3Interface struct behind a JUCE_VST3_COMPATIBLE_CLASSES define.",
+   "load_bearing": true, "confidence": "corroborated",
+   "sources": [{"url": "https://raw.githubusercontent.com/juce-framework/JUCE/9.0.2/BREAKING_CHANGES.md", "title": "JUCE breaking changes, version 9.0.0 section", "version": "9.0.2", "accessed": "2026-09-20", "tier": 1},
+               {"url": "https://github.com/juce-framework/JUCE/releases", "title": "release tag history", "version": "2026-09-20", "accessed": "2026-09-20", "tier": 2}],
+   "contradicted_by": [], "informs": ["D-001", "R-003"]},
+
+  {"id": "C-015", "claim": "Ableton Live honours an MPE zone configuration (RPN 6) and member pitch-bend-range (RPN 0,0) emitted from a plugin's MIDI output and routed to another track.",
+   "load_bearing": true, "confidence": "single-source",
+   "sources": [{"url": "https://help.ableton.com/hc/en-us/articles/360019144999", "title": "MPE in Live 11 and later FAQ", "version": "current", "accessed": "2026-09-20", "tier": 1}],
+   "contradicted_by": [],
+   "informs": ["S-012", "S-015", "R-006"],
+   "note": "The FAQ documents MPE input from controllers and MPE editing in clips. It does not state that a plugin's MIDI *output* can configure an MPE zone on a downstream track. This could not be verified in the planning sandbox because it requires a running Live installation. Carried into Phase 4 as R-006 (Medium) with a mitigation in S-012."}
+ ],
+ "summary": {"verified": 11, "corroborated": 3, "single_source": 1, "inferred": 0, "total": 15}
+}

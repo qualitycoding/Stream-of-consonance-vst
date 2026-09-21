@@ -1,0 +1,4 @@
+# SPIKE-01 output (2026-09-20T20:33:07Z), g++-free, Python 3.12.3, numpy 2.4.4
+standard  {}                              25 candidates      12.2 ms/note
+free      {'resolution_cents': 5.0}      481 candidates     133.4 ms/note
+free      {}                            2401 candidates     612.2 ms/note

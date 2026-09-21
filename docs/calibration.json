@@ -1,0 +1,96 @@
+{
+ "meta": {
+  "timbre": "harmonic, 11 partials, amp 1/h",
+  "sigma": 0.1,
+  "tolerance": 0.25,
+  "window": 4,
+  "novelty_weight": 1.5,
+  "n_steps": 30,
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "candidates": "-600..1795 cents re 220 Hz, 5-cent grid",
+  "seconds": 83.88678669929504
+ },
+ "attainable_random_search": {
+  "2": {
+   "min": 0.4554308439472676,
+   "p5": 0.9119924454762319,
+   "median": 1.8846621176101253,
+   "p95": 2.289782854781318,
+   "max": 3.055200944468882
+  },
+  "3": {
+   "min": -0.11233014036179778,
+   "p5": 0.5284098178308687,
+   "median": 1.2754103340109735,
+   "p95": 1.8048182005245887,
+   "max": 2.97842307595977
+  },
+  "4": {
+   "min": -0.6822474791733117,
+   "p5": 0.16542829789783475,
+   "median": 0.8141084867879855,
+   "p95": 1.293840899618638,
+   "max": 2.022931275783364
+  }
+ },
+ "rows": [
+  {
+   "target": 0.4,
+   "mean_error": 0.04295625242683446,
+   "std": 0.0958511139221581,
+   "mean_abs_error": 0.08954630037477099,
+   "frac_within_tol": 1.0,
+   "distinct_quarter_tone_pcs": 16.666666666666668,
+   "max_pc_share": 0.14444444444444446
+  },
+  {
+   "target": 0.8,
+   "mean_error": -0.019745693485204382,
+   "std": 0.09076631965751095,
+   "mean_abs_error": 0.07333466726933603,
+   "frac_within_tol": 0.9888888888888889,
+   "distinct_quarter_tone_pcs": 20.0,
+   "max_pc_share": 0.10000000000000002
+  },
+  {
+   "target": 1.2,
+   "mean_error": -0.055995128798669705,
+   "std": 0.0928100333051559,
+   "mean_abs_error": 0.0891828379750674,
+   "frac_within_tol": 0.9888888888888889,
+   "distinct_quarter_tone_pcs": 18.333333333333332,
+   "max_pc_share": 0.10000000000000002
+  },
+  {
+   "target": 1.6,
+   "mean_error": -0.09028994544894696,
+   "std": 0.11233816505280501,
+   "mean_abs_error": 0.11636547645558579,
+   "frac_within_tol": 0.9111111111111111,
+   "distinct_quarter_tone_pcs": 15.333333333333334,
+   "max_pc_share": 0.11111111111111112
+  },
+  {
+   "target": 2.0,
+   "mean_error": -0.12546139317072683,
+   "std": 0.09256784282890444,
+   "mean_abs_error": 0.13392140576009948,
+   "frac_within_tol": 0.9,
+   "distinct_quarter_tone_pcs": 13.0,
+   "max_pc_share": 0.16666666666666666
+  },
+  {
+   "target": 2.4,
+   "mean_error": -0.20502371468024302,
+   "std": 0.09490073564930122,
+   "mean_abs_error": 0.20791738758597245,
+   "frac_within_tol": 0.7555555555555555,
+   "distinct_quarter_tone_pcs": 4.333333333333333,
+   "max_pc_share": 0.43333333333333335
+  }
+ ]
+}

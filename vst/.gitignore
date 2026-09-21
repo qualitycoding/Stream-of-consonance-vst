@@ -1,0 +1,4 @@
+# build products of the core test suite
+tests/cpp/test_core
+tests/cpp/red_output.txt
+build/

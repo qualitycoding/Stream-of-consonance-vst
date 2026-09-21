@@ -1,0 +1,209 @@
+{
+ "cases": [
+  {
+   "cents": [
+    0.0
+   ],
+   "freqs_hz": [
+    220.0
+   ],
+   "hutchinson": 0.0022423737337162047,
+   "name": "unison",
+   "sethares": 0.023124490002729776,
+   "vassilakis": 0.09970584137430041
+  },
+  {
+   "cents": [
+    0.0,
+    1200.0
+   ],
+   "freqs_hz": [
+    220.0,
+    440.0
+   ],
+   "hutchinson": 0.004169661095620056,
+   "name": "octave",
+   "sethares": 0.06429062113833331,
+   "vassilakis": 0.20129219936362766
+  },
+  {
+   "cents": [
+    0.0,
+    700.0
+   ],
+   "freqs_hz": [
+    220.0,
+    329.6275569128699
+   ],
+   "hutchinson": 0.027525623385528,
+   "name": "perfect_fifth",
+   "sethares": 0.19196033433454918,
+   "vassilakis": 0.5070444396360879
+  },
+  {
+   "cents": [
+    0.0,
+    600.0
+   ],
+   "freqs_hz": [
+    220.0,
+    311.1269837220809
+   ],
+   "hutchinson": 0.10302099149106991,
+   "name": "tritone",
+   "sethares": 0.3167240144246123,
+   "vassilakis": 0.771531676222807
+  },
+  {
+   "cents": [
+    0.0,
+    100.0
+   ],
+   "freqs_hz": [
+    220.0,
+    233.08188075904496
+   ],
+   "hutchinson": 0.4901004219118878,
+   "name": "minor_second",
+   "sethares": 0.6138718338726031,
+   "vassilakis": 1.7908145915132816
+  },
+  {
+   "cents": [
+    0.0,
+    400.0,
+    700.0
+   ],
+   "freqs_hz": [
+    220.0,
+    277.1826309768721,
+    329.6275569128699
+   ],
+   "hutchinson": 0.14139859146356185,
+   "name": "major_triad",
+   "sethares": 0.8871900427509096,
+   "vassilakis": 2.3025875919747243
+  },
+  {
+   "cents": [
+    0.0,
+    300.0,
+    700.0
+   ],
+   "freqs_hz": [
+    220.0,
+    261.6255653005986,
+    329.6275569128699
+   ],
+   "hutchinson": 0.1518449532948543,
+   "name": "minor_triad",
+   "sethares": 0.9055803570560264,
+   "vassilakis": 2.34937737911825
+  },
+  {
+   "cents": [
+    0.0,
+    300.0,
+    600.0
+   ],
+   "freqs_hz": [
+    220.0,
+    261.6255653005986,
+    311.1269837220809
+   ],
+   "hutchinson": 0.2297370005810519,
+   "name": "diminished_triad",
+   "sethares": 1.0984213527978128,
+   "vassilakis": 2.807307019520348
+  },
+  {
+   "cents": [
+    0.0,
+    400.0,
+    700.0,
+    1000.0
+   ],
+   "freqs_hz": [
+    220.0,
+    277.1826309768721,
+    329.6275569128699,
+    391.99543598174927
+   ],
+   "hutchinson": 0.25490416346187084,
+   "name": "dominant_seventh",
+   "sethares": 1.6699454610244469,
+   "vassilakis": 4.043758606301535
+  },
+  {
+   "cents": [
+    0.0,
+    100.0,
+    200.0,
+    300.0
+   ],
+   "freqs_hz": [
+    220.0,
+    233.08188075904496,
+    246.94165062806206,
+    261.6255653005986
+   ],
+   "hutchinson": 1.0749709651989126,
+   "name": "cluster",
+   "sethares": 3.1026428874595178,
+   "vassilakis": 8.341897300090466
+  },
+  {
+   "cents": [
+    0.0,
+    386.3137138648348,
+    701.9550008653874
+   ],
+   "freqs_hz": [
+    220.0,
+    275.0,
+    330.0
+   ],
+   "hutchinson": 0.1320340266067235,
+   "name": "ji_major_triad",
+   "sethares": 0.8307804620951775,
+   "vassilakis": 2.130158340612482
+  },
+  {
+   "cents": [
+    0.0,
+    350.0,
+    750.0
+   ],
+   "freqs_hz": [
+    220.0,
+    269.2917795270242,
+    339.28638158974695
+   ],
+   "hutchinson": 0.17302159147634877,
+   "name": "microtonal_quartertone",
+   "sethares": 0.9495617274833107,
+   "vassilakis": 2.334898463909731
+  },
+  {
+   "cents": [
+    -600.0,
+    0.0,
+    700.0,
+    1750.0
+   ],
+   "freqs_hz": [
+    155.56349186104046,
+    220.0,
+    329.6275569128699,
+    604.5396048815592
+   ],
+   "hutchinson": 0.3538942947243991,
+   "name": "wide_spread",
+   "sethares": 1.258305546783487,
+   "vassilakis": 2.011055298086135
+  }
+ ],
+ "ref_hz": 220.0,
+ "ref_hz_note": "All `cents` values in this file are relative to ref_hz. Convert with f = ref_hz * 2**(cents/1200). Do NOT use composite.REF_HZ (C4) here: that constant only fixes the pitch-class origin inside the harmonicity term.",
+ "tolerance_abs": 1e-09
+}

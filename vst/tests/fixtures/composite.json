@@ -1,0 +1,206 @@
+{
+ "cases": [
+  {
+   "cents": [
+    0.0
+   ],
+   "features": {
+    "familiarity": -3.914534660955546,
+    "harmonicity": 1.5643341242707596,
+    "interference": 0.0022423737337162047,
+    "n_notes": 1.0
+   },
+   "name": "unison",
+   "score": 3.059928925108402
+  },
+  {
+   "cents": [
+    0.0,
+    1200.0
+   ],
+   "features": {
+    "familiarity": -3.914534660955546,
+    "harmonicity": 1.5643341242707596,
+    "interference": 0.004169661095620056,
+    "n_notes": 2.0
+   },
+   "name": "octave",
+   "score": 3.0568066998086647
+  },
+  {
+   "cents": [
+    0.0,
+    700.0
+   ],
+   "features": {
+    "familiarity": -3.973514816030728,
+    "harmonicity": 1.252370228320884,
+    "interference": 0.027525623385528,
+    "n_notes": 2.0
+   },
+   "name": "perfect_fifth",
+   "score": 2.4584354778454536
+  },
+  {
+   "cents": [
+    0.0,
+    600.0
+   ],
+   "features": {
+    "familiarity": -11.240342163551318,
+    "harmonicity": 0.940005943936536,
+    "interference": 0.10302099149106991,
+    "n_notes": 2.0
+   },
+   "name": "tritone",
+   "score": 1.1317761256133856
+  },
+  {
+   "cents": [
+    0.0,
+    100.0
+   ],
+   "features": {
+    "familiarity": -11.240342163551318,
+    "harmonicity": 0.9424188701018784,
+    "interference": 0.4901004219118878,
+    "n_notes": 2.0
+   },
+   "name": "minor_second",
+   "score": 0.508998301295905
+  },
+  {
+   "cents": [
+    0.0,
+    400.0,
+    700.0
+   ],
+   "features": {
+    "familiarity": -0.780243332100067,
+    "harmonicity": 0.9327908406982437,
+    "interference": 0.14139859146356185,
+    "n_notes": 3.0
+   },
+   "name": "major_triad",
+   "score": 1.9900479424510642
+  },
+  {
+   "cents": [
+    0.0,
+    300.0,
+    700.0
+   ],
+   "features": {
+    "familiarity": -2.271054763432914,
+    "harmonicity": 0.9327908406982436,
+    "interference": 0.1518449532948543,
+    "n_notes": 3.0
+   },
+   "name": "minor_triad",
+   "score": 1.8401093684988494
+  },
+  {
+   "cents": [
+    0.0,
+    300.0,
+    600.0
+   ],
+   "features": {
+    "familiarity": -6.134396689650738,
+    "harmonicity": 0.7299556054935302,
+    "interference": 0.2297370005810519,
+    "n_notes": 3.0
+   },
+   "name": "diminished_triad",
+   "score": 1.0081914742369793
+  },
+  {
+   "cents": [
+    0.0,
+    400.0,
+    700.0,
+    1000.0
+   ],
+   "features": {
+    "familiarity": -2.6105348277659473,
+    "harmonicity": 0.7322479310182735,
+    "interference": 0.25490416346187084,
+    "n_notes": 4.0
+   },
+   "name": "dominant_seventh",
+   "score": 1.2859117397654165
+  },
+  {
+   "cents": [
+    0.0,
+    100.0,
+    200.0,
+    300.0
+   ],
+   "features": {
+    "familiarity": -11.240342163551318,
+    "harmonicity": 0.6077412958494222,
+    "interference": 1.0749709651989126,
+    "n_notes": 4.0
+   },
+   "name": "cluster",
+   "score": -1.034198501810498
+  },
+  {
+   "cents": [
+    0.0,
+    386.3137138648348,
+    701.9550008653874
+   ],
+   "features": {
+    "familiarity": -0.780243332100067,
+    "harmonicity": 1.0032186702602701,
+    "interference": 0.1320340266067235,
+    "n_notes": 3.0
+   },
+   "name": "ji_major_triad",
+   "score": 2.1305747915437623
+  },
+  {
+   "cents": [
+    0.0,
+    350.0,
+    750.0
+   ],
+   "features": {
+    "familiarity": null,
+    "harmonicity": 0.6753024555927755,
+    "interference": 0.17302159147634877,
+    "n_notes": 3.0
+   },
+   "name": "microtonal_quartertone",
+   "score": 1.3412280672894166
+  },
+  {
+   "cents": [
+    -600.0,
+    0.0,
+    700.0,
+    1750.0
+   ],
+   "features": {
+    "familiarity": null,
+    "harmonicity": 0.6147434692412159,
+    "interference": 0.3538942947243991,
+    "n_notes": 4.0
+   },
+   "name": "wide_spread",
+   "score": 0.9404220615923252
+  }
+ ],
+ "ref_hz": 220.0,
+ "ref_hz_note": "All `cents` values in this file are relative to ref_hz. Convert with f = ref_hz * 2**(cents/1200). Do NOT use composite.REF_HZ (C4) here: that constant only fixes the pitch-class origin inside the harmonicity term.",
+ "tolerance_abs": 1e-09,
+ "weights": {
+  "familiarity": 0.0892234643584134,
+  "harmonicity": 1.77992362857478,
+  "intercept": 0.628434666589357,
+  "interference": -1.62001025973261,
+  "n_notes": 0.0
+ }
+}

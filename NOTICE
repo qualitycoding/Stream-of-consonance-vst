@@ -1,0 +1,15 @@
+This project reimplements formulas and reuses data from the R package `incon` (https://github.com/pmcharrison/incon)
+and its dependency `hrep`, both by Peter M. C. Harrison, MIT licensed:
+
+  MIT License, Copyright (c) 2018 Peter M. C. Harrison
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+  documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+  the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright
+  notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+Used: composite regression coefficients (har_19_composite_coef); Hutchinson-Knopoff / Sethares / Vassilakis roughness
+formulas (model-dycon.R); Milne/Harrison-Pearce pitch-class harmonicity (model-har18.R, hrep milne-pc-spectrum.R);
+Billboard chord-type counts (data/popular_1_pc_chord_type.rda, derived from the McGill Billboard corpus, Burgoyne 2011).
+Python code in this repository is an independent reimplementation, not a translation of the C++ sources.

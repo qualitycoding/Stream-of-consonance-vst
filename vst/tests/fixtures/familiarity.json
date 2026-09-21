@@ -1,0 +1,201 @@
+{
+ "cases": [
+  {
+   "cents": [
+    0.0
+   ],
+   "chord_type_id": 1,
+   "chord_type_pcs": [
+    0
+   ],
+   "log_prob": -3.914534660955546,
+   "name": "unison",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    1200.0
+   ],
+   "chord_type_id": 1,
+   "chord_type_pcs": [
+    0
+   ],
+   "log_prob": -3.914534660955546,
+   "name": "octave",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    700.0
+   ],
+   "chord_type_id": 17,
+   "chord_type_pcs": [
+    0,
+    7
+   ],
+   "log_prob": -3.973514816030728,
+   "name": "perfect_fifth",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    600.0
+   ],
+   "chord_type_id": 33,
+   "chord_type_pcs": [
+    0,
+    6
+   ],
+   "log_prob": -11.240342163551318,
+   "name": "tritone",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    100.0
+   ],
+   "chord_type_id": 1025,
+   "chord_type_pcs": [
+    0,
+    1
+   ],
+   "log_prob": -11.240342163551318,
+   "name": "minor_second",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    400.0,
+    700.0
+   ],
+   "chord_type_id": 145,
+   "chord_type_pcs": [
+    0,
+    4,
+    7
+   ],
+   "log_prob": -0.780243332100067,
+   "name": "major_triad",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    300.0,
+    700.0
+   ],
+   "chord_type_id": 273,
+   "chord_type_pcs": [
+    0,
+    3,
+    7
+   ],
+   "log_prob": -2.271054763432914,
+   "name": "minor_triad",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    300.0,
+    600.0
+   ],
+   "chord_type_id": 289,
+   "chord_type_pcs": [
+    0,
+    3,
+    6
+   ],
+   "log_prob": -6.134396689650738,
+   "name": "diminished_triad",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    400.0,
+    700.0,
+    1000.0
+   ],
+   "chord_type_id": 147,
+   "chord_type_pcs": [
+    0,
+    4,
+    7,
+    10
+   ],
+   "log_prob": -2.6105348277659473,
+   "name": "dominant_seventh",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    100.0,
+    200.0,
+    300.0
+   ],
+   "chord_type_id": 1793,
+   "chord_type_pcs": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "log_prob": -11.240342163551318,
+   "name": "cluster",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    386.3137138648348,
+    701.9550008653874
+   ],
+   "chord_type_id": 145,
+   "chord_type_pcs": [
+    0,
+    4,
+    7
+   ],
+   "log_prob": -0.780243332100067,
+   "name": "ji_major_triad",
+   "supported": true
+  },
+  {
+   "cents": [
+    0.0,
+    350.0,
+    750.0
+   ],
+   "chord_type_id": null,
+   "chord_type_pcs": null,
+   "log_prob": null,
+   "name": "microtonal_quartertone",
+   "supported": false
+  },
+  {
+   "cents": [
+    -600.0,
+    0.0,
+    700.0,
+    1750.0
+   ],
+   "chord_type_id": null,
+   "chord_type_pcs": null,
+   "log_prob": null,
+   "name": "wide_spread",
+   "supported": false
+  }
+ ],
+ "neutral_log_prob": -2.34127473752867,
+ "ref_hz": 220.0,
+ "ref_hz_note": "All `cents` values in this file are relative to ref_hz. Convert with f = ref_hz * 2**(cents/1200). Do NOT use composite.REF_HZ (C4) here: that constant only fixes the pitch-class origin inside the harmonicity term.",
+ "tolerance_abs": 1e-12,
+ "tolerance_cents": 20.0
+}

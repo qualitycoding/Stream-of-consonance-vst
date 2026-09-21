@@ -1,0 +1,185 @@
+{
+ "bit_generator": "PCG64 (XSL-RR 128/64)",
+ "cases": [
+  {
+   "first_doubles": [
+    0.6369616873214543,
+    0.2697867137638703,
+    0.04097352393619469,
+    0.016527635528529094,
+    0.8132702392002724,
+    0.9127555772777217,
+    0.6066357757671799,
+    0.7294965609839984
+   ],
+   "first_raw_uint64_hex": [
+    "0xa30febcfd9c2825f",
+    "0x4510bdf882d9d721",
+    "0xa7d3da94ecde8b8",
+    "0x43b27b61342f01d",
+    "0xd0327a782cde513b",
+    "0xe9aa5979a6401c4e",
+    "0x9b4c7b7180edb27f",
+    "0xbac0495ff8829a45"
+   ],
+   "initial_inc_hex": "0x418ddadb3af71a82588133bc447873a9",
+   "initial_state_hex": "0x1aa1b5345996452d09585eb7a69561e3",
+   "seed": 0
+  },
+  {
+   "first_doubles": [
+    0.5118216247002567,
+    0.9504636963259353,
+    0.14415961271963373,
+    0.9486494471372439,
+    0.31183145201048545,
+    0.42332644897257565,
+    0.8277025938204418,
+    0.4091991363691613
+   ],
+   "first_raw_uint64_hex": [
+    "0x8306bdf37922e4ff",
+    "0xf35196bbc152a866",
+    "0x24e7a4f608ec18cd",
+    "0xf2dab0aed2ac6fd2",
+    "0x4fd42fa03fcd72a9",
+    "0x6c5f1f45de787048",
+    "0xd3e4513345ee6d24",
+    "0x68c1464c41ca3aca"
+   ],
+   "initial_inc_hex": "0x922af2da2645f895a19857b95740937b",
+   "initial_state_hex": "0x9c5b484bfedb756c2a6e7d6f320fbc7e",
+   "seed": 1
+  },
+  {
+   "first_doubles": [
+    0.08564916714362436,
+    0.2368105065960997,
+    0.8012744652063969,
+    0.5821620360643678,
+    0.09412864224039919,
+    0.4331269402364738,
+    0.479051298140834,
+    0.15973891463707857
+   ],
+   "first_raw_uint64_hex": [
+    "0x15ed1a93cfbec2f8",
+    "0x3c9f9d052defd3f5",
+    "0xcd2052c72e6dec36",
+    "0x95089239de860724",
+    "0x1818d0900a160f0e",
+    "0x6ee1683b550b2907",
+    "0x7aa31b1a9f08c9e2",
+    "0x28e4a64643c92921"
+   ],
+   "initial_inc_hex": "0xa7043c160277735a2ed88b8bc66abe1f",
+   "initial_state_hex": "0xf38b68fdd16b0f8da7f7267aef605897",
+   "seed": 3
+  },
+  {
+   "first_doubles": [
+    0.625095466604667,
+    0.8972138009695755,
+    0.7756856902451935,
+    0.22520718999059186,
+    0.30016628491122543,
+    0.8735534453962619,
+    0.005265304565574724,
+    0.8212284183827663
+   ],
+   "first_raw_uint64_hex": [
+    "0xa00641a9f1e54a8b",
+    "0xe5afcdbcaf266a95",
+    "0xc693565f940af962",
+    "0x39a72dabd56a2742",
+    "0x4cd7b2990e375145",
+    "0xdfa132d748fa2734",
+    "0x1591126e9a1ac70",
+    "0xd23c068f7ff206dd"
+   ],
+   "initial_inc_hex": "0xc4751896ce8acebf66887f5ac070d959",
+   "initial_state_hex": "0x9d0aecc4e7b188919ae2415a6b292038",
+   "seed": 7
+  },
+  {
+   "first_doubles": [
+    0.7739560485559633,
+    0.4388784397520523,
+    0.8585979199113825,
+    0.6973680290593639,
+    0.09417734788764953,
+    0.9756223516367559,
+    0.761139701990353,
+    0.7860643052769538
+   ],
+   "first_raw_uint64_hex": [
+    "0xc621fbcd16d92688",
+    "0x705a5661a791ffc1",
+    "0xdbcd12c26eda1624",
+    "0xb286b60e1600888d",
+    "0x181c01b5339381eb",
+    "0xf9c262ed86c7538c",
+    "0xc2da0d2fbc5a4471",
+    "0xc93b82a3b7ac9740"
+   ],
+   "initial_inc_hex": "0xfa505436c9a8416e66caf2e28d25abff",
+   "initial_state_hex": "0xcea44f6798798f2aacbc7c9d68860ac8",
+   "seed": 42
+  },
+  {
+   "first_doubles": [
+    0.22733602246716966,
+    0.31675833970975287,
+    0.7973654573327341,
+    0.6762546707509746,
+    0.391109550601909,
+    0.33281392786638453,
+    0.5983087535871898,
+    0.18673418560371335
+   ],
+   "first_raw_uint64_hex": [
+    "0x3a32b18db2ffc19d",
+    "0x51171315c9e4c4de",
+    "0xcc2024823444efd9",
+    "0xad1f06aea486e910",
+    "0x641fc168fd0b7b0d",
+    "0x55334b27d6e48f43",
+    "0x992ac3319147e59d",
+    "0x2fcdcfc436908a5f"
+   ],
+   "initial_inc_hex": "0xc9c7353e6e2b1f287d761f2d4027fae7",
+   "initial_state_hex": "0x1905e0335aae96349199b0d09775add5",
+   "seed": 12345
+  },
+  {
+   "first_doubles": [
+    0.27085409914511427,
+    0.9338994503936809,
+    0.4394176650121123,
+    0.6444773687748296,
+    0.4972420143878542,
+    0.4668084360544641,
+    0.1697000141523538,
+    0.9894889507244302
+   ],
+   "first_raw_uint64_hex": [
+    "0x4556b1b9d0d8c66a",
+    "0xef1408cd3177cb2b",
+    "0x707dad1482ff2869",
+    "0xa4fc7805e6680c0e",
+    "0x7f4b40adfe34f236",
+    "0x7780c1f659d00ca8",
+    "0x2b7175caea43cc46",
+    "0xfd4f25db1d6274dd"
+   ],
+   "initial_inc_hex": "0x286bf8d3585f6ddfbd6db4b03ea6f251",
+   "initial_state_hex": "0xa5a54acf28f1a80d573160cbfb3e3d3a",
+   "seed": 2147483647
+  }
+ ],
+ "double_from_raw": "(raw >> 11) * 2**-53",
+ "ref_hz": 220.0,
+ "ref_hz_note": "All `cents` values in this file are relative to ref_hz. Convert with f = ref_hz * 2**(cents/1200). Do NOT use composite.REF_HZ (C4) here: that constant only fixes the pitch-class origin inside the harmonicity term.",
+ "seeding": "numpy SeedSequence",
+ "tolerance_abs": 0.0
+}

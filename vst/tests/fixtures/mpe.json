@@ -1,0 +1,101 @@
+{
+ "bend_range_semitones": 2.0,
+ "cases": [
+  {
+   "bend14": 8192,
+   "cents_rel_ref": 0.0,
+   "error_cents": 0.0,
+   "freq_hz": 220.0,
+   "midi_note": 57,
+   "offset_cents": 0.0,
+   "produced_offset_cents": 0.0
+  },
+  {
+   "bend14": 8233,
+   "cents_rel_ref": 1.0,
+   "error_cents": 0.0010376609902496003,
+   "freq_hz": 220.12711369144208,
+   "midi_note": 57,
+   "offset_cents": 0.999999999999801,
+   "produced_offset_cents": 1.0010376609900506
+  },
+  {
+   "bend14": 8151,
+   "cents_rel_ref": -1.0,
+   "error_cents": -0.0010376609902496003,
+   "freq_hz": 219.87295971110376,
+   "midi_note": 57,
+   "offset_cents": -0.999999999999801,
+   "produced_offset_cents": -1.0010376609900506
+  },
+  {
+   "bend14": 10199,
+   "cents_rel_ref": 49.0,
+   "error_cents": 0.0020142830981342286,
+   "freq_hz": 226.31572920806352,
+   "midi_note": 57,
+   "offset_cents": 49.0000000000002,
+   "produced_offset_cents": 49.00201428309833
+  },
+  {
+   "bend14": 6144,
+   "cents_rel_ref": 50.0,
+   "error_cents": -0.003051944088383607,
+   "freq_hz": 226.44649206156825,
+   "midi_note": 58,
+   "offset_cents": -50.0,
+   "produced_offset_cents": -50.003051944088384
+  },
+  {
+   "bend14": 10240,
+   "cents_rel_ref": -50.0,
+   "error_cents": 0.003051944088383607,
+   "freq_hz": 213.7370270537933,
+   "midi_note": 56,
+   "offset_cents": 50.0,
+   "produced_offset_cents": 50.003051944088384
+  },
+  {
+   "bend14": 7631,
+   "cents_rel_ref": 386.3137138648348,
+   "error_cents": -0.010838933503537262,
+   "freq_hz": 275.0,
+   "midi_note": 61,
+   "offset_cents": -13.686286135165204,
+   "produced_offset_cents": -13.697125068668742
+  },
+  {
+   "bend14": 8272,
+   "cents_rel_ref": 701.9550008653874,
+   "error_cents": -0.0017566488220488452,
+   "freq_hz": 330.0,
+   "midi_note": 64,
+   "offset_cents": 1.9550008653880013,
+   "produced_offset_cents": 1.9532442165659525
+  },
+  {
+   "bend14": 10240,
+   "cents_rel_ref": 1750.0,
+   "error_cents": 0.003051944088383607,
+   "freq_hz": 604.5396048815592,
+   "midi_note": 74,
+   "offset_cents": 50.0,
+   "produced_offset_cents": 50.003051944088384
+  },
+  {
+   "bend14": 8192,
+   "cents_rel_ref": -600.0,
+   "error_cents": 0.0,
+   "freq_hz": 155.56349186104046,
+   "midi_note": 51,
+   "offset_cents": 0.0,
+   "produced_offset_cents": 0.0
+  }
+ ],
+ "centre": 8192,
+ "max_error_cents": 0.05,
+ "ref_hz": 220.0,
+ "ref_hz_note": "All `cents` values in this file are relative to ref_hz. Convert with f = ref_hz * 2**(cents/1200). Do NOT use composite.REF_HZ (C4) here: that constant only fixes the pitch-class origin inside the harmonicity term.",
+ "rpn": "0,0",
+ "zone": "lower, master ch 1, members ch 2-16"
+}

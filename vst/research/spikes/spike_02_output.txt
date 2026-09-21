@@ -1,0 +1,4 @@
+# SPIKE-02 output (2026-09-20T20:33:14Z)
+max abs diff 1.665e-15
+reference   584.0 ms -> rotation    86.2 ms  (6.8x)
+PASS: rotation identity holds to machine precision

@@ -1,0 +1,33 @@
+Stream-of-Consonance core conformance suite (15 tests)
+  T_000   PASS
+           Every fixture loads, declares its cents reference, and is non-empty. Calls no soc:: function, so it PASSES in the red state and proves the other tests' inputs exist. SC-1; R-001.
+  T_001   FAIL (not implemented: not implemented: harmonicTimbre)
+           harmonicTimbre(11, 1.0) reproduces the incon default spectrum. Enforces SC-1; claims C-001.
+  T_002   FAIL (not implemented: not implemented: harmonicTimbre)
+           Hutchinson-Knopoff roughness matches the oracle for 13 chords incl. clusters and wide spacings. SC-1; C-002.
+  T_003   FAIL (not implemented: not implemented: harmonicTimbre)
+           Pitch-class harmonicity in bits matches the oracle, including microtonal chords. SC-1; C-003, C-006.
+  T_004   FAIL (not implemented: not implemented: familiarityLogP)
+           Familiarity returns log P for 12-TET chords and nullopt beyond the 20-cent tolerance. SC-1; C-004.
+  T_005   FAIL (not implemented: not implemented: familiarityLogP)
+           Familiarity boundary: 19 cents sharp is supported, 21 cents sharp is not. SC-1; C-004.
+  T_006   FAIL (not implemented: not implemented: harmonicTimbre)
+           Composite score matches the oracle for all fixture chords. SC-1; C-005.
+  T_007   FAIL (not implemented: not implemented: harmonicTimbre)
+           Invalid input is rejected rather than silently scored. SC-1; R-008.
+  T_008   FAIL (not implemented: not implemented: candidateCents)
+           candidateCents reproduces every fixture pitch set, by count, endpoints and digest. SC-2; C-007.
+  T_009   FAIL (not implemented: not implemented: harmonicTimbre)
+           CandidateScorer reproduces score_with_candidates elementwise for every held set. SC-1, SC-3; C-005, C-006.
+  T_010   FAIL (not implemented: not implemented: Pcg64::fromState)
+           PCG64 reproduces numpy Generator.random() bit-for-bit for every fixture seed. SC-4; C-008.
+  T_011   FAIL (not implemented: not implemented: harmonicTimbre)
+           generateStream reproduces the oracle note sequences exactly for every fixture stream. SC-4; C-009.
+  T_012   FAIL (not implemented: not implemented: encodeMpe)
+           MPE note+bend encoding lands within 0.05 cents and round-trips. SC-5; C-010, C-011.
+  T_013   FAIL (not implemented: not implemented: harmonicTimbre)
+           Free-mode 1-cent scoring of 2401 candidates completes within the 40 ms budget. SC-3; C-012, R-002.
+  T_014   FAIL (not implemented: not implemented: harmonicTimbre)
+           Scoring with an empty held set is valid and equals scoring each candidate alone. SC-1; boundary case.
+
+1/15 tests passed, 29/29 checks passed

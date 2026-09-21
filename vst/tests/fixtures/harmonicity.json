@@ -1,0 +1,124 @@
+{
+ "cases": [
+  {
+   "bits": 1.5643341242707596,
+   "cents": [
+    0.0
+   ],
+   "name": "unison"
+  },
+  {
+   "bits": 1.5643341242707596,
+   "cents": [
+    0.0,
+    1200.0
+   ],
+   "name": "octave"
+  },
+  {
+   "bits": 1.2523702283208844,
+   "cents": [
+    0.0,
+    700.0
+   ],
+   "name": "perfect_fifth"
+  },
+  {
+   "bits": 0.9400059439365367,
+   "cents": [
+    0.0,
+    600.0
+   ],
+   "name": "tritone"
+  },
+  {
+   "bits": 0.9424188701018786,
+   "cents": [
+    0.0,
+    100.0
+   ],
+   "name": "minor_second"
+  },
+  {
+   "bits": 0.9327908406982435,
+   "cents": [
+    0.0,
+    400.0,
+    700.0
+   ],
+   "name": "major_triad"
+  },
+  {
+   "bits": 0.9327908406982433,
+   "cents": [
+    0.0,
+    300.0,
+    700.0
+   ],
+   "name": "minor_triad"
+  },
+  {
+   "bits": 0.7299556054935288,
+   "cents": [
+    0.0,
+    300.0,
+    600.0
+   ],
+   "name": "diminished_triad"
+  },
+  {
+   "bits": 0.7322479310182739,
+   "cents": [
+    0.0,
+    400.0,
+    700.0,
+    1000.0
+   ],
+   "name": "dominant_seventh"
+  },
+  {
+   "bits": 0.6077412958494219,
+   "cents": [
+    0.0,
+    100.0,
+    200.0,
+    300.0
+   ],
+   "name": "cluster"
+  },
+  {
+   "bits": 1.0032186702602703,
+   "cents": [
+    0.0,
+    386.3137138648348,
+    701.9550008653874
+   ],
+   "name": "ji_major_triad"
+  },
+  {
+   "bits": 0.6753024555927754,
+   "cents": [
+    0.0,
+    350.0,
+    750.0
+   ],
+   "name": "microtonal_quartertone"
+  },
+  {
+   "bits": 0.6147434692412157,
+   "cents": [
+    -600.0,
+    0.0,
+    700.0,
+    1750.0
+   ],
+   "name": "wide_spread"
+  }
+ ],
+ "grid_cents": 1.0,
+ "ref_hz": 220.0,
+ "ref_hz_note": "All `cents` values in this file are relative to ref_hz. Convert with f = ref_hz * 2**(cents/1200). Do NOT use composite.REF_HZ (C4) here: that constant only fixes the pitch-class origin inside the harmonicity term.",
+ "rho_exponent": 0.75,
+ "sigma_cents": 6.83,
+ "tolerance_abs": 1e-09
+}
