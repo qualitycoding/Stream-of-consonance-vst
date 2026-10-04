@@ -38,5 +38,24 @@ requested.
 
 ## Outcome
 
-See `DEVIATIONS.md` and the push commit SHAs recorded in `.checkpoints/state.json` after S-KNOW
-completes.
+**Lessons and knowledge: pushed and verified.** `qualitycoding/Lessons` commit `51e5342`
+(22 entries, up from 11), `qualitycoding/knowledge` commit `db1ee95` (20 entries, up from 14).
+Both re-cloned fresh and schema-checked after push; both indexes' entry counts match their
+directories' actual file counts.
+
+One correction made live during this step, not planned: the first `knowledge` push
+(`c65b421`) carried a stale `INDEX.md` (14 entries, should have been 20) because
+`scripts/build_index.py` crashed partway through on a JSON-escaping bug in one new file, the bug
+was fixed, but the index generator was not re-run before committing. Caught by the fresh-clone
+verification this step itself requires, fixed in a follow-up commit (`db1ee95`), and recorded as
+an 11th lesson (`L-20261004T153000Z`, a recurrence of `L-20261004T150700Z`).
+
+**`Stream-of-consonance-vst`: not pushed this step.** This run's updates (the addendum adoption,
+D-009, and all 11 lessons / 6 knowledge items as they exist on the working branch) are committed
+locally (`f0d2c09`) but not on GitHub. Both GitHub tokens supplied earlier in this conversation
+for that repository now return `401 Bad credentials` (consistent with having been rotated, which
+was recommended). The token supplied for this step is scoped only to `Lessons`/`knowledge` (`403`
+on that repo, not `401` — a valid but out-of-scope credential, not a revoked one). Per the
+addendum's own fallback for an unreachable target, holding only this part back: delivered as
+`stream-of-consonance-vst-update.bundle` instead, reported to the human.
+

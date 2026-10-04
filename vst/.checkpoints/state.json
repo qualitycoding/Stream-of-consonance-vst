@@ -77,7 +77,8 @@
   "S-008 sampler/stream generator: T-011 PASS for 4/5 fixture streams; 1 stream (free5_t1.6_seed7) fails from note 2 onward for a fully isolated, documented reason (cross-library floating point rounding at a discrete model threshold) -- see TEST_CHALLENGE.md. An attempted fix was tried, found to regress other passing tests, and was reverted.",
   "MPE encoding/decoding (part of S-012's core, done early since it's JUCE-free): T-012 PASS",
   "INTERFACE_AMENDMENT.md filed and applied: CandidateScorer needed a read-only candidateCentsView() accessor for generateStream to be implementable at all -- a genuine gap in the frozen soc_core.h contract, caught only by actually implementing against it. Freeze manifest regenerated to cover the amended header.",
-  "Adopted the lessons & knowledge addendum mid-run; S-RETRO complete (RETROSPECTIVE.md); 10 retroactive lessons + 6 knowledge items written and schema-validated; D-009 applied (Consonance range correction)"
+  "Adopted the lessons & knowledge addendum mid-run; S-RETRO complete (RETROSPECTIVE.md); 10 retroactive lessons + 6 knowledge items written and schema-validated; D-009 applied (Consonance range correction)",
+  "S-KNOW: qualitycoding/Lessons pushed and verified (commit 51e5342, 22 entries); qualitycoding/knowledge pushed and verified (commit db1ee95, 20 entries, after a live self-correction -- see L-20261004T153000Z)"
  ],
  "knowledge_added": [
   "K-20261004T151100Z-pcg64-xsl-rr-advance-then-output",
@@ -117,7 +118,8 @@
   "L-20261004T150700Z-scripted-str-replace-silently-no-opped",
   "L-20261004T150800Z-bulk-delete-removed-tracked-file",
   "L-20261004T150900Z-local-head-diverged-from-api-pushed-remote",
-  "L-20261004T151000Z-parameter-range-set-without-attainable-range-check"
+  "L-20261004T151000Z-parameter-range-set-without-attainable-range-check",
+  "L-20261004T153000Z-index-regen-skipped-after-crash-fix"
  ],
  "open_items": [
   "Phase 3.5 cold-read gate: run by the planner rather than a fresh Sonnet agent (no subagents). Two defects found and fixed: (1) fixtures did not declare their cents reference -> R-001, fixed, T-000 added; (2) soc_core.h defaulted MPE bend range to 48 semitones while mpe.json records 2 -> header corrected, D-006 written. A genuinely independent cold read is still recommended before implementation begins.",
@@ -130,13 +132,13 @@
  "pending": [
   "S-009 onward (JUCE plugin, generator thread, synth, MPE wiring, editor, host validation, soak, release build): NOT started. Requires JUCE + MSVC + Windows + Ableton Live, none of which exist in this Linux sandbox. Genuinely blocked on environment, not on remaining design work.",
   "T-013 performance: needs either real-hardware measurement (this sandbox's timing may not be representative) or the D-002 resolution-ladder mitigation applied.",
-  "5.3 push to GitHub - still blocked on credentials; bundle/zip re-delivered with this turn's changes."
+  "Push f0d2c09 (local HEAD, includes all addendum-adoption work) to qualitycoding/Stream-of-consonance-vst -- blocked on a scoped credential; delivered as stream-of-consonance-vst-update.bundle instead"
  ],
  "phase": "closing",
  "premortem_round": 2,
  "research_round": 2,
  "run_id": "soc-vst-20260920T202705Z",
- "subphase": "S-RETRO complete, S-KNOW in progress",
+ "subphase": "S-KNOW: lessons/knowledge pushed; Stream-of-consonance-vst push pending a scoped credential",
  "tier_substitutions": [
   {
    "assigned": "Fable (Mythos)",
@@ -149,5 +151,5 @@
    "used": "single Opus context, sequential passes"
   }
  ],
- "updated_at": "2026-10-04T15:04:30.600189Z"
+ "updated_at": "2026-10-04T15:57:35.181827Z"
 }

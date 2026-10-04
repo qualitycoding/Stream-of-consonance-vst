@@ -55,3 +55,14 @@ Consonance parameter's range from the model's full published regression range (â
 held (`K-20261004T102022Z-composite-score-attainable-range`) but this plan's original `A-004` had
 not checked. Logged as its own decision record (D-009) and as a recurrence of an existing lesson
 (`L-20261004T151000Z`, `recurrence_of: L-20261004T102005Z`), not silently folded into this entry.
+
+## S-KNOW push: partial completion, Stream-of-consonance-vst held back
+
+Lessons and knowledge stores pushed and verified (see `GATE-G-003.md`'s Outcome section). The
+addendum-adoption changes to `Stream-of-consonance-vst` itself (this file, `plan/PLAN.md`'s
+closing steps, `plan/GATES.md`, `RETROSPECTIVE.md`, `research/PRIOR_KNOWLEDGE.md`, the 11
+lessons and 6 knowledge items as committed to the working branch, D-009) are committed locally
+(`f0d2c09`) but not pushed, for lack of a working credential scoped to that repository at the
+time S-KNOW ran. Delivered as a git bundle instead. This is the addendum's own documented
+fallback (3.7.2.3) applied to the one part of the push that could not complete, not a reason to
+hold back the parts that could.
