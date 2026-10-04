@@ -28,3 +28,30 @@ enough on this specific machine.
 ## T-011: see TEST_CHALLENGE.md
 
 Filed formally rather than logged here, since it required reverting an attempted fix.
+
+## Adopted the lessons & knowledge addendum (v3.1 -> v3.2 addendum)
+
+Mid-run, as the implementing agent, per the addendum's "Implementing agent (the plan is already
+pushed)" adoption path. No frozen test, security control, data integrity guarantee, public
+interface, or evidence class is touched by this — it adds process (Rules 11-13), two closing plan
+steps, and new non-frozen files (`lessons/`, `knowledge/`, `research/PRIOR_KNOWLEDGE.md`,
+`RETROSPECTIVE.md`, `plan/GATES.md`) — so v3.1's default decision rule permits applying it without
+a halt. Ran the retroactive-lessons catch-up (10 lessons for corrections already made this run)
+and the knowledge-item catch-up (6 new facts), per the addendum's explicit instructions for this
+adoption path; skipped R0 proper (research is over) but read the store as part of S-RETRO instead,
+recording applicability in `research/PRIOR_KNOWLEDGE.md`.
+
+**Two-repo split, not the addendum's single-store default.** The addendum's default proposal is
+one repository (`agent-knowledge`) holding both `lessons/` and `knowledge/`. The human specified
+two separate repositories instead (`qualitycoding/Lessons`, `qualitycoding/knowledge`), matching
+their own pre-existing convention from an earlier run on this same codebase (confirmed: both
+repos already existed, populated by `gen-20260919T204010Z-consonance-inverse`, the run that built
+the Python `consonance` package this plugin ports). Followed the human's explicit instruction and
+established convention rather than the addendum's generic default.
+
+**One planning correction made as a direct result of the catch-up read**: `D-009` narrows the
+Consonance parameter's range from the model's full published regression range (−0.7…3.1) to
+−0.7…2.2, using attainable-range evidence for 4-note sonorities that the knowledge store already
+held (`K-20261004T102022Z-composite-score-attainable-range`) but this plan's original `A-004` had
+not checked. Logged as its own decision record (D-009) and as a recurrence of an existing lesson
+(`L-20261004T151000Z`, `recurrence_of: L-20261004T102005Z`), not silently folded into this entry.

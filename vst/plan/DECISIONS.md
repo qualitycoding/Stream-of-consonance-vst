@@ -63,6 +63,25 @@ package and are themselves frozen.
 *Rule:* if a fixture appears wrong, that is a Test Challenge (see `vst/tests/FROZEN.md`), not an
 edit. Regenerating fixtures is changing the specification.
 
+## D-009 — Consonance parameter range narrowed to −0.7 … 2.2, not the full regression range
+A-004 originally set the Consonance control to the composite model's full published regression
+range, −0.7 … 3.1. That range describes scores across *all* chord sizes; it is not what a 4-note
+window (A-006's default) can actually reach. The knowledge store loaded while adopting the
+lessons & knowledge addendum (`K-20261004T102022Z-composite-score-attainable-range`, from the
+original consonance-model research run) measured the attainable range directly: 1500 random
+4-note chords under the same timbre and weights gave median/p95/max scores of 0.81/1.29/2.02, and
+a calibration run targeting 2.4 "collapsed onto 3-4 repeated pitch classes" and only reached
+tolerance 76% of the time. The sampler is directed (weighted toward the target), not pure random
+search, so it reaches somewhat higher than random search alone -- but not past where the
+candidate set simply has no chord close enough to the target to select. −0.7 … 2.2 keeps the top
+of the range inside what a 4-note window can plausibly reach without the collapse behaviour the
+knowledge item documents; this still needs verification in S-016's soak test once the real
+instrument exists. This directly sharpens R-012 (saturation near the range's ends), which named
+the risk without quantifying it.
+*Rule:* if S-016's soak test shows the sampler still saturating well inside 2.2, apply the same
+default decision rule as D-002's resolution ladder: narrow the range further and log it, rather
+than relaxing any test.
+
 ## Parameters (normative)
 
 | Parameter | Type | Range / values | Default | Automatable | Notes |
@@ -70,7 +89,7 @@ edit. Regenerating fixtures is changing the specification.
 | `pitchMode` | Choice | `Note`, `Frequency` | `Note` | yes | Selects start units *and* candidate set (A-002) |
 | `startNote` | Int | 0–127 | 57 (A3 = 220 Hz) | yes | Read at stream start only (A-003) |
 | `startFreq` | Float | 20–5000 Hz, exponential skew | 220.0 | yes | Read at stream start only |
-| `consonance` | Float | −0.7 … 3.1 | 1.6 | yes | Latched per note at generation time (A-005) |
+| `consonance` | Float | −0.7 … 2.2 | 1.6 | yes | Latched per note at generation time (A-005); range narrowed from the full regression range by D-009 |
 | `sigma` | Float | 0.02 … 1.0 | 0.1 | yes | Tightness of the level set (A-009) |
 | `rate` | Choice | 1/1 … 1/16 | 1/4 | yes | Tempo-synced (A-006) |
 | `seed` | Int | 0–9999 | 7 | **no** | Saved with the preset (A-007) |

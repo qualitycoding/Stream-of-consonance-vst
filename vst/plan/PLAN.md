@@ -375,3 +375,50 @@ For any situation not covered above: choose the most reversible option that does
 scope, log it in `vst/DEVIATIONS.md` with the rationale, and continue — **unless** it touches a
 frozen test, the consonance model's numerical behaviour, or a public interface in `soc_core.h`,
 in which case halt and write `vst/BLOCKED.md`.
+
+---
+
+## Closing steps (lessons & knowledge addendum, 3.7)
+
+Adopted mid-run (see `DEVIATIONS.md`). These are the plan's last two steps and depend on every
+step before them, including the JUCE-dependent steps S-009..S-018 once those are eventually done.
+
+### S-RETRO Retrospective
+- Tier: Opus (fresh context in general; run by the implementing agent itself here, logged as a
+  limitation — see `RETROSPECTIVE.md`'s item under "what was overlooked")
+- Depends on: all prior steps as of whenever this is run
+- Inputs: full commit history, `DEVIATIONS.md`, `BLOCKED.md`, `TEST_CHALLENGE.md`,
+  `INTERFACE_AMENDMENT.md`, `premortem/`, `research/PRIOR_KNOWLEDGE.md`
+- Actions: answer the four retrospective questions (3.7.1); write one lesson per overlooked
+  finding not already recorded, one knowledge item per undocumented new fact
+- Outputs: `RETROSPECTIVE.md`
+- Done when: every finding links to an `L-` or `K-` file and the Appendix C schema check passes
+- Checkpoint: `lessons_recorded`, `knowledge_added` populated in `.checkpoints/state.json`
+- On failure: a schema failure is fixed in place (it is new, non-frozen content); it does not
+  trigger `BLOCKED.md`
+- Lessons applied: none (this step produces lessons, it does not consume them)
+- Relevant: Rule 11, Rule 12, 3.7.1
+
+### S-KNOW Lessons & Knowledge Push, gate G-003
+- Tier: Haiku
+- Depends on: S-RETRO
+- Inputs: `lessons/`, `knowledge/`, the knowledge store location recorded in `A-011`
+- Actions:
+  1. Write `GATE-G-003.md` listing every lesson/knowledge ID, title and tags, and the proposed
+     push target.
+  2. Halt at `G-003` unless the target and authorization were already given upfront in the same
+     message that requested adoption of the addendum (as they were this run) — in which case
+     record that in `GATE-G-003.md` as the sign-off and proceed without a second round-trip.
+  3. Copy `lessons/` and `knowledge/` into the target(s) in the Appendix C layout, regenerate
+     `INDEX.md` with `scripts/build_index.py`, add any new tags to `TAXONOMY.md` in the same
+     commit, and push.
+  4. If the push is rejected because the target moved on, pull, regenerate the indexes (entries
+     are separate files, so they do not conflict), and retry, up to 3 times.
+- Outputs: updated `qualitycoding/Lessons` and `qualitycoding/knowledge` (this run's two-repo
+  split of the addendum's single-store default — see `DEVIATIONS.md`)
+- Done when: the push succeeded and both targets' indexes list every pushed ID
+- Checkpoint: record both repos' new commit SHAs
+- On failure: write `git bundle create knowledge-<run_id>.bundle` and report its path
+- Lessons applied: `L-20261004T150600Z-git-push-pack-transport-failed-reproducibly` (use the
+  GitHub REST API if a normal push fails the same way it did for the main VST push)
+- Relevant: Rule 13, 3.7.2, G-003
