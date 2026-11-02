@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "repository": "qualitycoding/Stream-of-consonance-vst",
+  "branch": "main",
+  "candidate_commit": "59ee528b8b3ef932c6a138c08ceff19e443ad647",
+  "gate_id": "G-LISTEN",
+  "round": 1,
+  "test_type": "implementation-equivalence",
+  "status": "blocked",
+  "prerequisites": [
+    {
+      "id": "PR-001",
+      "status": "blocked",
+      "evidence": "VST S-009 onward is blocked on JUCE/Windows/host environment and is not started."
+    },
+    {
+      "id": "PR-002",
+      "status": "blocked",
+      "evidence": "The complete synth voice/plugin audio path and offline C++ renders are required."
+    },
+    {
+      "id": "PR-003",
+      "status": "blocked",
+      "evidence": "Python oracle renders from identical fixture streams/events are required."
+    }
+  ],
+  "frozen_metrics": [],
+  "reference": {
+    "kind": "not-rendered",
+    "source_ids": [],
+    "licence_or_consent": "not-established",
+    "redistribution": "private-local-only",
+    "checksums": ""
+  },
+  "candidate_renders": {
+    "manifest": "",
+    "checksums": ""
+  },
+  "pair_builder": {
+    "script": "scripts/make_blind_pairs.py",
+    "commit": "",
+    "seed": 20261105,
+    "pairs": 12,
+    "window": "start",
+    "seconds": 1.0,
+    "rms_db": -23.0,
+    "fade_seconds": 0.01,
+    "sample_rate": 44100
+  },
+  "evidence": {
+    "mode": "private-local",
+    "branch": "",
+    "commit": "",
+    "bundle": "",
+    "sha256sums": "",
+    "private_location_id": "Stream-of-consonance-vst-G-LISTEN-owner-local"
+  },
+  "answers": {
+    "ordered": "",
+    "submitted_at": "",
+    "same_side_count": 0
+  },
+  "score": {
+    "correct": 0,
+    "total": 12,
+    "one_sided_p": null,
+    "pass_condition": "correct <= 8 && no unresolved qualitative finding"
+  },
+  "qualitative_findings": [],
+  "iterations": [],
+  "response": {
+    "value": "blocked",
+    "recorded_at": "2026-11-02T14:15:19Z",
+    "file": "GATE-G-LISTEN.LISTENING.md"
+  },
+  "resume": {
+    "next_step": "S-RETRO",
+    "checkpoint_file": "vst/.checkpoints/state.json",
+    "checkpoint_commit": "",
+    "execution_log_commit": ""
+  }
+}
