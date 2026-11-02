@@ -48,7 +48,8 @@
   "vst/tests/make_fixtures.py": "b158ac2b06cad5bfa0f416f6423c5f599763ac59c46253107405cd78afeaf20b",
   "vst/tests/verify_frozen.sh": "cf4b120c0fc615f131bca41bd1928c7046a6fcf75a44b628824f3d9947594c6a",
   "vst/third_party/json.hpp": "9bea4c8066ef4a1c206b2be5a36302f8926f7fdc6087af5d20b417d0cf103ea6",
-  "vst/tools/embed_counts.py": "7dd570465312b5aeed56c4d8a2398364503f4cca258e061489db2728a7b6b5ed"
+  "vst/tools/embed_counts.py": "7dd570465312b5aeed56c4d8a2398364503f4cca258e061489db2728a7b6b5ed",
+  "ADDENDUM-V3.9-STATUS.md": "written"
  },
  "branch": "gen-20260920T202705Z-stream-of-consonance-vst",
  "completed": [
@@ -151,5 +152,18 @@
    "used": "single Opus context, sequential passes"
   }
  ],
- "updated_at": "2026-10-04T15:57:35.181827Z"
+ "updated_at": "2026-10-04T15:57:35.181827Z",
+ "execution_context": {
+  "objective": "v3.9 planning addendum amendment (planning-only)",
+  "protocol": "v3.9",
+  "protocol_commit": "ef99285404419153dd5f9aaae14f14bb53604a62",
+  "implementation_branch": "impl-v39-addendum-20261102",
+  "amended_on": "2026-11-02"
+ },
+ "active_variables": {
+  "baseline": "unversioned",
+  "source_tip": "40f3d3a1bfe8917fad3b56bee1190fe7ea1854a2",
+  "audited_commit": "d4075852db02391ed0be2a25fd30132728279b99"
+ },
+ "lesson_store": "qualitycoding/Lessons"
 }

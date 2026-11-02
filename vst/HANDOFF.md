@@ -121,3 +121,5 @@ A failing test is ordinarily evidence of an incomplete implementation, not an in
 * The timings in C-012 were measured on the planning sandbox, not your machine. The conclusion
   they support (generation off the audio thread) is robust to that; the specific 40 ms budget in
   T-013 may need the D-002 resolution ladder on slower hardware.
+
+Reading order: `vst/HANDOFF.md` → root `ADDENDUM-PLAN-V3.9.md` → `vst/plan/PLAN.md`.

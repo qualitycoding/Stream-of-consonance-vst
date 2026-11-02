@@ -66,3 +66,7 @@ lessons and 6 knowledge items as committed to the working branch, D-009) are com
 time S-KNOW ran. Delivered as a git bundle instead. This is the addendum's own documented
 fallback (3.7.2.3) applied to the one part of the push that could not complete, not a reason to
 hold back the parts that could.
+
+## v3.9 addendum (2026-11-02)
+
+D-901 tip drift benign; API-only writes with remote-SHA verification; no local build/test/mutation execution (D-905); no fresh-context review (D-906); G-003 stores pending sign-off.
