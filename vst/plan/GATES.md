@@ -15,3 +15,9 @@ in the same message — functionally equivalent to `push-to: <target>` answered 
 even reached. `GATE-G-003.md` records this as the sign-off rather than issuing a second request
 for information already given. See `research/PRIOR_KNOWLEDGE.md` A-011 for the recorded
 knowledge-store assumption this satisfies.
+
+## G-003 — split learning stores (v3.9)
+
+Lessons and knowledge push to **separate** stores: the `Lessons` repository and
+the `knowledge` repository. G-003 requests destinations at plan close;
+**do-not-push** until human sign-off; bundle fallback documented.

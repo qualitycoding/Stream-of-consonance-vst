@@ -1,3 +1,5 @@
+# PLAN — protocol v3.9 (upgraded by ADDENDUM-PLAN-V3.9.md)
+
 # PLAN — Stream-of-Consonance VST3/MPE instrument
 
 **STATUS: READY**
@@ -422,3 +424,12 @@ step before them, including the JUCE-dependent steps S-009..S-018 once those are
 - Lessons applied: `L-20261004T150600Z-git-push-pack-transport-failed-reproducibly` (use the
   GitHub REST API if a normal push fails the same way it did for the main VST push)
 - Relevant: Rule 13, 3.7.2, G-003
+
+
+## Amendment closing/review steps (v3.9)
+
+- **S-000** — Intake and environment probe.
+- **S-REVIEW** — Traditional code review.
+- **S-ADVERSARIAL** — Adversarial review.
+- **S-RETRO** — Retrospective.
+- **S-KNOW** — Lessons/knowledge; G-003 controls publication to Lessons and knowledge stores.
